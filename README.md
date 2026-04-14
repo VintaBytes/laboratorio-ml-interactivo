@@ -1,6 +1,7 @@
 # Laboratorio Machine Learning Interactivo
 
 Visualizador interactivo de conceptos básicos de **Machine Learning** construido con **Python**, **Pygame**, **NumPy** y **scikit-learn**.
+<span><img src="https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue"/></span>
 
 El objetivo del programa es ofrecer un entorno simple y visual para explorar cómo cambian las fronteras de decisión de distintos modelos de clasificación al modificar el conjunto de datos, agregar muestras manualmente y variar algunos parámetros del modelo.
 
@@ -16,6 +17,8 @@ Además de los modelos de `scikit-learn`, el proyecto incluye un pequeño **modo
 
 En otras palabras, no se trata solamente de “usar modelos”, sino de **verlos trabajar**.
 
+<span><img src="https://github.com/VintaBytes/laboratorio-ml-interactivo/blob/main/images/2.png"  width="600px"/></span>
+
 ---
 
 ## Características principales
@@ -29,6 +32,8 @@ En otras palabras, no se trata solamente de “usar modelos”, sino de **verlos
 - Modo especial de entrenamiento manual de un perceptrón.
 - Interfaz simple, directa y apropiada para uso educativo.
 - Ventana redimensionable, con tamaño de fuente ajustado automáticamente.
+
+<span><img src="https://github.com/VintaBytes/laboratorio-ml-interactivo/blob/main/images/3.png"  width="600px"/></span>
 
 ---
 
@@ -51,6 +56,8 @@ La tecla `+` y la tecla `-` permiten aumentar o disminuir un parámetro general 
 - En **SVM**, modifica el valor de `C`.
 - En **árbol de decisión**, modifica la profundidad máxima `max_depth`.
 - En **regresión logística**, en esta versión el parámetro visible cambia, pero no se utiliza efectivamente para reconfigurar el modelo.
+
+<span><img src="https://github.com/VintaBytes/laboratorio-ml-interactivo/blob/main/images/1.png"  width="600px"/></span>
 
 ---
 
@@ -82,6 +89,8 @@ Representa visualmente las zonas donde la predicción es menos segura, es decir,
 
 Este punto es especialmente útil para explicar por qué algunas regiones del espacio son más ambiguas que otras.
 
+<span><img src="https://github.com/VintaBytes/laboratorio-ml-interactivo/blob/main/images/5.png"  width="600px"/></span>
+
 ---
 
 ## Interacciones disponibles
@@ -110,6 +119,8 @@ Según el modelo seleccionado, también se pueden mostrar ayudas adicionales:
 
 - En **KNN**, se dibujan los vecinos más cercanos al cursor y el radio que los contiene.
 - En **SVM**, se pueden resaltar los **support vectors**.
+
+<span><img src="https://github.com/VintaBytes/laboratorio-ml-interactivo/blob/main/images/4.png"  width="600px"/></span>
 
 ---
 
