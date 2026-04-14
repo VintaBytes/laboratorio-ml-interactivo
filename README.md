@@ -234,18 +234,18 @@ Ese cruce entre programación, visualización y teoría hace que el programa sea
 
 ---
 
-## Observaciones técnicas sobre esta versión
+## Observaciones técnicas
 
 Aunque el programa ya es plenamente funcional, hay algunos detalles técnicos que conviene conocer:
 
-### 1. HUD heredado
+### 1. HUD 
 Hay fragmentos de HUD y variables heredadas de versiones previas que podrían simplificarse en una futura limpieza del código. No afectan el funcionamiento principal, pero representan una buena oportunidad de refactorización.
 
 ---
 
 ## Posibles mejoras futuras
 
-Algunas extensiones interesantes para continuar el proyecto podrían ser:
+Algunas extensiones interesantes que pienso explorar para continuar el proyecto incluyen:
 
 - agregar una leyenda visual más desarrollada,
 - permitir elegir parámetros específicos por modelo,
