@@ -17,7 +17,7 @@ Además de los modelos de `scikit-learn`, el proyecto incluye un pequeño **modo
 
 En otras palabras, no se trata solamente de “usar modelos”, sino de **verlos trabajar**.
 
-<span><img src="https://github.com/VintaBytes/laboratorio-ml-interactivo/blob/main/images/2.png"  width="600px"/></span>
+<span><img src="https://github.com/VintaBytes/laboratorio-ml-interactivo/blob/main/images/7.png"  width="600px"/></span>
 
 ---
 
@@ -33,7 +33,7 @@ En otras palabras, no se trata solamente de “usar modelos”, sino de **verlos
 - Interfaz simple, directa y apropiada para uso educativo.
 - Ventana redimensionable, con tamaño de fuente ajustado automáticamente.
 
-<span><img src="https://github.com/VintaBytes/laboratorio-ml-interactivo/blob/main/images/3.png"  width="600px"/></span>
+<span><img src="https://github.com/VintaBytes/laboratorio-ml-interactivo/blob/main/images/1.png"  width="600px"/></span>
 
 ---
 
@@ -57,7 +57,7 @@ La tecla `+` y la tecla `-` permiten aumentar o disminuir un parámetro general 
 - En **árbol de decisión**, modifica la profundidad máxima `max_depth`.
 - En **regresión logística**, en esta versión el parámetro visible cambia, pero no se utiliza efectivamente para reconfigurar el modelo.
 
-<span><img src="https://github.com/VintaBytes/laboratorio-ml-interactivo/blob/main/images/1.png"  width="600px"/></span>
+<span><img src="https://github.com/VintaBytes/laboratorio-ml-interactivo/blob/main/images/6.png"  width="600px"/></span>
 
 ---
 
@@ -169,6 +169,8 @@ Este módulo agrupa funciones auxiliares vinculadas a machine learning:
 
 Separar estas funciones del archivo principal mejora bastante la legibilidad del proyecto y hace más fácil su ampliación futura.
 
+<span><img src="https://github.com/VintaBytes/laboratorio-ml-interactivo/blob/main/images/2.png"  width="600px"/></span>
+
 ---
 
 ## Dependencias
@@ -231,6 +233,8 @@ Este proyecto resulta interesante porque combina tres niveles de aprendizaje:
 3. **Implementación manual** de un perceptrón sencillo para comprender la lógica de entrenamiento.
 
 Ese cruce entre programación, visualización y teoría hace que el programa sea adecuado para un “laboratorio” de aprendizaje automático orientado a principiantes.
+
+<span><img src="https://github.com/VintaBytes/laboratorio-ml-interactivo/blob/main/images/3.png"  width="600px"/></span>
 
 ---
 
