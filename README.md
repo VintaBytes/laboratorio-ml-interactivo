@@ -73,8 +73,9 @@ El programa puede generar cinco tipos de datasets sintéticos:
 Estos conjuntos se generan mediante funciones de `sklearn.datasets`, lo que vuelve al proyecto muy cómodo para clases, demostraciones o experimentación rápida.
 
 - **Spiral**
+- **Random**
 
-Este conjunto se genera matemáticamente, y es interesante para probar los límites de algunos modelos cuando los datos están agrupados en formas intrincadas.
+Estos conjuntos se generan "matemáticamente", y son interesantes para probar los límites de algunos modelos cuando los datos están agrupados en formas intrincadas, o directamente no hay patrones claros.
 
 ---
 
