@@ -18,8 +18,7 @@ Además de los modelos de `scikit-learn`, el proyecto incluye un pequeño **modo
 
 En otras palabras, no se trata solamente de “usar modelos”, sino de **verlos trabajar**.
 
-<span><img src="https://github.com/VintaBytes/laboratorio-ml-interactivo/blob/main/images/7.png"  width="600px"/></span>
-
+<span><img src="https://github.com/VintaBytes/laboratorio-ml-interactivo/blob/main/images/5.png"  width="600px"/></span>
 ---
 
 ## Características principales
@@ -90,7 +89,7 @@ Representa visualmente las zonas donde la predicción es menos segura, es decir,
 
 Este punto es especialmente útil para explicar por qué algunas regiones del espacio son más ambiguas que otras.
 
-<span><img src="https://github.com/VintaBytes/laboratorio-ml-interactivo/blob/main/images/5.png"  width="600px"/></span>
+<span><img src="https://github.com/VintaBytes/laboratorio-ml-interactivo/blob/main/images/7.png"  width="600px"/></span>
 
 ---
 
@@ -121,7 +120,7 @@ Según el modelo seleccionado, también se pueden mostrar ayudas adicionales:
 - En **KNN**, se dibujan los vecinos más cercanos al cursor y el radio que los contiene.
 - En **SVM**, se pueden resaltar los **support vectors**.
 
-<span><img src="https://github.com/VintaBytes/laboratorio-ml-interactivo/blob/main/images/4.png"  width="600px"/></span>
+<span><img src="https://github.com/VintaBytes/laboratorio-ml-interactivo/blob/main/images/2.png"  width="600px"/></span>
 
 ---
 
@@ -170,7 +169,7 @@ Este módulo agrupa funciones auxiliares vinculadas a machine learning:
 
 Separar estas funciones del archivo principal mejora bastante la legibilidad del proyecto y hace más fácil su ampliación futura.
 
-<span><img src="https://github.com/VintaBytes/laboratorio-ml-interactivo/blob/main/images/2.png"  width="600px"/></span>
+<span><img src="https://github.com/VintaBytes/laboratorio-ml-interactivo/blob/main/images/4.png"  width="600px"/></span>
 
 ---
 
@@ -241,7 +240,7 @@ Ese cruce entre programación, visualización y teoría hace que el programa sea
 
 ## Observaciones técnicas
 
-Aunque el programa ya es plenamente funcional, hay algunos detalles técnicos que conviene conocer:
+Aunque el programa ya es plenaxmente funcional, hay algunos detalles técnicos que conviene conocer:
 
 ### 1. HUD 
 Hay fragmentos de HUD y variables heredadas de versiones previas que podrían simplificarse en una futura limpieza del código. No afectan el funcionamiento principal, pero representan una buena oportunidad de refactorización.
