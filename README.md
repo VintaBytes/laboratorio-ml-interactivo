@@ -246,15 +246,6 @@ Ese cruce entre programación, visualización y teoría hace que el programa sea
 
 ---
 
-## Observaciones técnicas
-
-Aunque el programa ya es plenaxmente funcional, hay algunos detalles técnicos que conviene conocer:
-
-### 1. HUD 
-Hay fragmentos de HUD y variables heredadas de versiones previas que podrían simplificarse en una futura limpieza del código. No afectan el funcionamiento principal, pero representan una buena oportunidad de refactorización.
-
----
-
 ## Posibles mejoras futuras
 
 Algunas extensiones interesantes que pienso explorar para continuar el proyecto incluyen:
