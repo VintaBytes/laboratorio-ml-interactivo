@@ -5,11 +5,7 @@ import pygame
 import numpy as np
 from sklearn.metrics import accuracy_score
 from sklearn.model_selection import train_test_split
-from ml_utils import (
-    generar_dataset, 
-    entrenar_modelo, 
-    calcular_frontera, 
-)
+from ml_utils import generar_dataset, entrenar_modelo, calcular_frontera
 
 # ANCHO = 1280
 # ALTO = 720
@@ -32,7 +28,7 @@ mostrar_vecinos = False
 accuracy = 0
 modo_mapa = 0   # 0 normal, 1 probabilidad, 2 incertidumbre
 modelos = ["logistic", "svm", "knn", "tree"]
-datasets = ["blobs", "moons", "circles", "classification"]
+datasets = ["blobs", "moons", "circles", "classification", "gaussian", "spiral"]
 
 # --------------------------------------------------------------
 # Ventana gráfica
@@ -70,26 +66,25 @@ parametro_modelo = 5
 # --------------------------------------------------------------
 def generar_nuevo_dataset():
     global X, y
+    global X_train, X_test, y_train, y_test
     global xmin, xmax, ymin, ymax
 
     X, y = generar_dataset(dataset_actual)
+    X_train, X_test, y_train, y_test = train_test_split(
+        X, y, test_size=0.25, random_state=42
+    )
+    xmin, xmax = X[:,0].min() - 1, X[:,0].max() + 1
+    ymin, ymax = X[:,1].min() - 1, X[:,1].max() + 1
 
-    xmin, xmax = X[:, 0].min() - 1, X[:, 0].max() + 1
-    ymin, ymax = X[:, 1].min() - 1, X[:, 1].max() + 1
 
-    actualizar_split()
-
-
-# --------------------------------------------------------------
-# Reentrena el modelo si modifique datos.
 # --------------------------------------------------------------
 def reentrenar():
     global modelo, grid, xs, ys
     global train_acc, test_acc, prob_map
 
-    # entrenar modelo SOLO con entrenamiento
-    modelo = entrenar_modelo(modelo_actual, X_train, y_train, parametro_modelo)
-
+    # entrenar modelo
+    modelo = entrenar_modelo(modelo_actual, X, y, parametro_modelo)
+    
     # resolución frontera
     if modelo_actual == "tree":
         resolucion = 240
@@ -99,7 +94,6 @@ def reentrenar():
     grid, xs, ys = calcular_frontera(
         modelo, xmin, xmax, ymin, ymax, resolucion
     )
-
     # accuracy entrenamiento
     pred_train = modelo.predict(X_train)
     train_acc = accuracy_score(y_train, pred_train)
@@ -113,7 +107,7 @@ def reentrenar():
     if hasattr(modelo, "predict_proba"):
         xx, yy = np.meshgrid(xs, ys)
         puntos = np.c_[xx.ravel(), yy.ravel()]
-        probs = modelo.predict_proba(puntos)[:, 1]
+        probs = modelo.predict_proba(puntos)[:,1]
         prob_map = probs.reshape(xx.shape)
 
 # --------------------------------------------------------------
@@ -302,11 +296,11 @@ def dibujar_ayuda():
         "[H] Mostrar / ocultar ayuda",
         "",
         "DATASETS:",
-        "[D] Bloobs | Moons | Circles | Classification",
+        "[D] Blobs | Moons | Circles | Classification | Gaussian | Spiral",
         "[R] Regenerar dataset",
         "",
         "MODELOS:",
-        "[M] LR | SVM | KNN | Decision Tree",
+        "[M] Logistic R. | SVM | KNN | Decision Tree",
         "[V] Mostrar / ocultar vecinos KNN",
         "[B] Cambiar tipo de mapa",
         "[+] Aumentar parametro",
@@ -334,7 +328,7 @@ def dibujar_ayuda():
         pantalla.blit(txt,(50,y_pos))
         y_pos += tamaño_fuente + 2
 
- 
+
 # --------------------------------------------------------------
 # Dibuja datos del modelo actual en pantalla
 # --------------------------------------------------------------
@@ -354,8 +348,8 @@ def dibujar_hud():
         ]
     else:
         linea2 = [
-            f"Parametros: {parametro_modelo:2}{"":12}",
-            f"   Train: {train_acc:.3f}{"":4}"
+            f"Parametros: {parametro_modelo:2}{'':12}",
+            f"   Train: {train_acc:.3f}{'':4}"
             f"  Test: {test_acc:.3f}"
         ]
     texto1 = "   ".join(linea1)
@@ -365,20 +359,6 @@ def dibujar_hud():
     pantalla.blit(surf1,(20,6))
     pantalla.blit(surf2,(20,6 + tamaño_fuente + 4))
 
-
-# --------------------------------------------------------------
-# Recalcula train/test a partir del dataset actual
-# --------------------------------------------------------------
-def actualizar_split():
-    global X_train, X_test, y_train, y_test
-
-    X_train, X_test, y_train, y_test = train_test_split(
-        X,
-        y,
-        test_size=0.25,
-        random_state=42,
-        stratify=y
-    )
 
 # --------------------------------------------------------------
 # Inicialización del modelo y loop principal
@@ -440,23 +420,19 @@ while running:
         if event.type == pygame.MOUSEBUTTONDOWN:
             px, py = pygame.mouse.get_pos()
             x, y_mundo = pantalla_a_mundo(px, py)
-
             if event.button == 1:   # click izquierdo
                 X = np.vstack([X, [x, y_mundo]])
                 y = np.append(y, 0)
-                actualizar_split()
                 reentrenar()
-
             elif event.button == 3: # click derecho
                 X = np.vstack([X, [x, y_mundo]])
                 y = np.append(y, 1)
-                actualizar_split()
                 reentrenar()
 
-                # Evento cambio tamaño de ventana
-                if event.type == pygame.VIDEORESIZE:
-                    ANCHO, ALTO = event.w, event.h
-                    actualizar_fuente()
+        # Evento cambio tamaño de ventana
+        if event.type == pygame.VIDEORESIZE:
+            ANCHO, ALTO = event.w, event.h
+            actualizar_fuente()
 
     # ------------------------------
     # Dibujar frontera
