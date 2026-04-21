@@ -28,7 +28,7 @@ mostrar_vecinos = False
 accuracy = 0
 modo_mapa = 0   # 0 normal, 1 probabilidad, 2 incertidumbre
 modelos = ["logistic", "svm", "knn", "tree"]
-datasets = ["blobs", "moons", "circles", "classification", "gaussian", "spiral"]
+datasets = ["blobs", "moons", "circles", "classification", "gaussian", "spiral", "random"]
 
 # --------------------------------------------------------------
 # Ventana gráfica
@@ -58,8 +58,8 @@ actualizar_fuente()
 # Estado del programa
 # --------------------------------------------------------------
 dataset_actual = "moons"
-modelo_actual = "knn"
-parametro_modelo = 5
+modelo_actual = "logistic"
+parametro_modelo = 2
 
 # --------------------------------------------------------------
 # Funciones que generan el dataset y entrenan el modelo.

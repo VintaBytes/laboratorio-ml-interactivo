@@ -36,6 +36,17 @@ def make_spiral(n=60):
 
 
 # --------------------------------------------------------------
+# Genera el set de datos "Random" manualmente
+# --------------------------------------------------------------
+def make_random(n=60):
+    # puntos uniformes en el plano
+    X = np.random.uniform(-5, 5, (n, 2))
+    # etiquetas totalmente aleatorias
+    y = np.random.randint(0, 2, n)
+
+    return X, y
+
+# --------------------------------------------------------------
 # Genera el set de datos
 # --------------------------------------------------------------
 def generar_dataset(tipo="blobs", n=60, ruido=0.2):
@@ -64,6 +75,8 @@ def generar_dataset(tipo="blobs", n=60, ruido=0.2):
         )
     elif tipo == "spiral":
         X, y = make_spiral(n)
+    elif tipo == "random":
+        X, y = make_random(n)
 
     return X, y
 
