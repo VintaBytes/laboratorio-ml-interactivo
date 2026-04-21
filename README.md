@@ -1,6 +1,7 @@
 # Laboratorio Machine Learning Interactivo
 
 Visualizador interactivo de conceptos básicos de **Machine Learning** construido con **Python**, **Pygame**, **NumPy** y **scikit-learn**.
+
 <span><img src="https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue"/></span>
 
 El objetivo del programa es ofrecer un entorno simple y visual para explorar cómo cambian las fronteras de decisión de distintos modelos de clasificación al modificar el conjunto de datos, agregar muestras manualmente y variar algunos parámetros del modelo.
