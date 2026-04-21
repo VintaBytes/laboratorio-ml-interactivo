@@ -19,6 +19,7 @@ Además de los modelos de `scikit-learn`, el proyecto incluye un pequeño **modo
 En otras palabras, no se trata solamente de “usar modelos”, sino de **verlos trabajar**.
 
 <span><img src="https://github.com/VintaBytes/laboratorio-ml-interactivo/blob/main/images/5.png"  width="600px"/></span>
+
 ---
 
 ## Características principales
@@ -76,6 +77,8 @@ Estos conjuntos se generan mediante funciones de `sklearn.datasets`, lo que vuel
 - **Random**
 
 Estos conjuntos se generan "matemáticamente", y son interesantes para probar los límites de algunos modelos cuando los datos están agrupados en formas intrincadas, o directamente no hay patrones claros.
+
+<span><img src="https://github.com/VintaBytes/laboratorio-ml-interactivo/blob/main/images/8.png"  width="600px"/></span>
 
 ---
 
