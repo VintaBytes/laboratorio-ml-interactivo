@@ -3,6 +3,9 @@
 Visualizador interactivo de conceptos básicos de **Machine Learning** construido con **Python**, **Pygame**, **NumPy** y **scikit-learn**.
 
 <span><img src="https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue"/></span>
+<span><img src="https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white"/></span>
+<img src="https://img.shields.io/badge/Pygame-Python%20games-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
+<span><img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white"/></span>
 
 El objetivo del programa es ofrecer un entorno simple y visual para explorar cómo cambian las fronteras de decisión de distintos modelos de clasificación al modificar el conjunto de datos, agregar muestras manualmente y variar algunos parámetros del modelo.
 
